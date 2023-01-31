@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { Home } from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BigStuff } from './pages/BigStuff';
+import { NotSoBigStuff } from './pages/NotSoBigStuff.js';
+import { SmallStuff } from './pages/SmallStuff';
+import { Details } from './pages/Details';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/bigstuff"} element={<BigStuff />} />
+          <Route path={"/notsobigstuff"} element={<NotSoBigStuff />} />
+          <Route path={"/smallstuff"} element={<SmallStuff />} />
+          <Route path={"/details"} element={<Details />} />
+        </Routes>
+      </Router>
     </div>
+
   );
 }
 

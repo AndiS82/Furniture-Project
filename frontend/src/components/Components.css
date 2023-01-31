@@ -1,0 +1,29 @@
+/* COMPONENTS CSS GLOBAL*/
+
+/* NAVBAR */
+.Nav {
+    margin: 0 25%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.NavP {
+    color: black;
+    text-decoration: none;
+}
+
+.NavP:hover {
+    cursor: pointer;
+}
+
+/* ADDSTUFF */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkboxStuff {
+    display: flex;
+    justify-content: center;
+}
