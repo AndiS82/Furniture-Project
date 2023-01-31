@@ -1,5 +1,5 @@
 import { ConnectionClosedEvent } from "mongodb"
-import { getDb } from "../utils/dbFurniture"
+import { getDb } from "../utils/dbFurniture.js"
 
 
 export const insertFurniture = (furn) => {
