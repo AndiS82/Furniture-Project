@@ -4,8 +4,7 @@ import multer from "multer";
 import morgan from "morgan";
 import './config/config.js'
 import { furnitureCreate } from "./controller/newFurniture.js";
-
-const PORT = 8989;
+import PORT from ".env";
 
 const app = express();
 
