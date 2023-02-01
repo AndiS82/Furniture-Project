@@ -57,6 +57,7 @@ label {
 }
 
 .picContainer {
+    height: 30vh;
     box-shadow: 0 3px 25px #111;
 }
 
