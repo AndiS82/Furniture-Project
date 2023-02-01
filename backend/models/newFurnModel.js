@@ -1,4 +1,3 @@
-import { ConnectionClosedEvent } from "mongodb"
 import { getDb } from "../utils/dbFurniture.js"
 
 
@@ -7,7 +6,7 @@ export const insertFurniture = (furn) => {
         getDb()
             .then((db) => db.collection("Inventar").insertOne(furn))
             .then((result) => {
-                ConnectionClosedEvent.log("test: newFurnitureModel Zeile 10 läuft")
+                console.log("test: newFurnitureModel Zeile 10 läuft")
                 resolve(result.insertedId)
             })
             .catch((err) => reject(err))
