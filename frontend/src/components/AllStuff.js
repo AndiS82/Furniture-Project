@@ -5,7 +5,7 @@ export function ItemList() {
     const [inventar, setInventar] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:8989/api/bigstuff")
+        fetch("http://localhost:9998/api/bigstuff")
             .then((response) => response.json())
             .then((data) => { setInventar(data) })
     }, [])
