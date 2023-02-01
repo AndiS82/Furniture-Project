@@ -15,7 +15,6 @@ export const BigStuff = () => {
         console.log(bigstuff)
     }, [])
 
-
     return (
         <div>
             <Navbar />
