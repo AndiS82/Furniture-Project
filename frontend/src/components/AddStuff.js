@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export const AddStuff = () => {
     const [furniture, setFurniture] = useState([])
+    const [picId, setPicId] = useState()
 
     useEffect(() => {
         fetch("http://localhost:9998/api/bigstuff")
@@ -23,11 +24,13 @@ export const AddStuff = () => {
                     "title": e.target.title.value,
                     "room": e.target.room.value,
                     "stuff": e.target.stuff.value
+
                 })
             })
             .then((response) => response.json())
             .then((data) => {
                 setFurniture(data)
+                setPicId(data.id)
             })
     }
 
@@ -53,10 +56,12 @@ export const AddStuff = () => {
                         </div>
                     </div>
                 </div>
-                <div><label>Image</label>
-                    <input type="image" name="image"></input></div>
                 <div><input type={"text"} placeholder="Add Text"></input></div>
                 <button type="submit">Add Furniture</button>
+            </form>
+            <form action={`http://localhost:9998/api/fileUpload/${picId}`} method="post" enctype="multipart/form-data">
+                <input type="file" name="wallpaper" />
+                <button type="submit">Add Picture</button>
             </form>
         </div>
     )

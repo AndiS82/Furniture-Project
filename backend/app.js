@@ -5,26 +5,29 @@ import morgan from "morgan";
 import './config/config.js'
 import { furnitureCreate } from "./controller/newFurniture.js";
 import { getFurniture } from "./controller/allFurniture.js"
+import { furnitureUpdate } from "./controller/updateFurniture.js";
 
 const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.json());
-//app.use(multer());
 //an Tag 74 hatten wir Multer benutzt. Der Import war wie hier aber wir hatten das anders verwendet:
-//const upload = multer({ dest: './public' })
-//und dann im Post request so: app.post('/natur', upload.single('wallpaper'), (req, res) => {
-//     console.log('Der Body:', req.file);
-//     const post = {
-//         title: req.body.title,
-//         picture: req.file.path
-//     }
-//     posts.push(post)
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "./public")
+    },
+    filename: function (req, file, cb) {
+        let ext = file.originalname.substring(file.originalname.lastIndexOf('.'), file.originalname.length);
+        cb(null, Date.now() + ext)
+    }
+});
 
-//     res.json(posts)
-// })
+const upload = multer({ dest: './public', storage: storage })
+app.post('/api/fileUpload/:id', upload.single('wallpaper'), furnitureUpdate)
+
 app.use(morgan("dev"));
 app.use(cors())
+app.use("/public", express.static("public"))
 
 app.post("/api/bigstuff", furnitureCreate)
 app.get("/api/bigstuff", getFurniture)

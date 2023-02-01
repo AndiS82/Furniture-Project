@@ -20,6 +20,9 @@ export function ItemList() {
                         <p>Name: {inventar.title}</p>
                     </div>
                     <div>
+                        <img src={`http://localhost:9998/${inventar.path}`}></img>
+                    </div>
+                    <div>
                         <p>Raum: {inventar.room}</p>
                     </div>
                     <div>
