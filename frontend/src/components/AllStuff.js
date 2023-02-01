@@ -5,17 +5,26 @@ export function ItemList() {
     const [inventar, setInventar] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:9998/api/bigstuff")
+        fetch("http://localhost:8989/api/bigstuff")
             .then((response) => response.json())
             .then((data) => { setInventar(data) })
     }, [])
+    console.log(inventar)
     return (
         <div>
-            {inventar.map((inventar, key) => <article key={key}>
-                <p>Name: {inventar.titel}</p>
-                <p>Raum: {inventar.room}</p>
-                <p>Stuff: {inventar.stuff}</p>
-            </article>)}
+            {(inventar.furn).map((inventar) =>
+                <div id="fetch">
+                    <div >
+                        <p>Name: {inventar.title}</p>
+                    </div>
+                    <div>
+                        <p>Raum: {inventar.room}</p>
+                    </div>
+                    <div>
+                        <p>Stuff: {inventar.stuff}</p>
+                    </div>
+                </div>)
+            }
         </div>
     )
 }

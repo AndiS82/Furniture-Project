@@ -11,8 +11,10 @@ export const Home = () => {
             </>
             <header>
                 <h1>My Furniture</h1>
-                <ItemList />
             </header>
+            <>
+                <ItemList />
+            </>
         </div>
     )
 }
