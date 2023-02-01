@@ -1,4 +1,4 @@
-import { insertFurniture } from "../models/newFurnModel";
+import { insertFurniture } from "../models/newFurnModel.js";
 
 export const furnitureCreate = (req, res) => {
     const {
