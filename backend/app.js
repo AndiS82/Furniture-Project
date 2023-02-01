@@ -4,6 +4,7 @@ import multer from "multer";
 import morgan from "morgan";
 import './config/config.js'
 import { furnitureCreate } from "./controller/newFurniture.js";
+import { getFurniture } from "./controller/allFurniture.js"
 
 const PORT = process.env.PORT;
 const app = express();
@@ -26,7 +27,7 @@ app.use(morgan("dev"));
 app.use(cors())
 
 app.post("/api/bigstuff", furnitureCreate)
-// app.
+app.get("/api/bigstuff", getFurniture)
 
 app.listen(PORT, () => {
     console.log("Server is running on port " + PORT);
