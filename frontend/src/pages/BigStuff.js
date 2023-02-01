@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { AddStuff } from "../components/AddStuff"
 import { Navbar } from "../components/Navbar"
+import "./Pages.css"
 
 export const BigStuff = () => {
 
@@ -20,16 +21,25 @@ export const BigStuff = () => {
         <div>
             <Navbar />
             {console.log(bigstuff)}
-            {bigstuff?.map((stuff) =>
-                <div>
-                    <div>
-                        <img src={`http://localhost:9998/${stuff.path}`} alt="bigstuff"></img>
-                    </div>
-                    <p>{stuff.title}</p>
-                    <p>{stuff.room}</p>
-                    <p>{stuff.text}</p>
-                </div>)}
-            <AddStuff />
+            <div className="bigStuffContainer">
+                <div >
+                    {bigstuff?.map((stuff) =>
+                        <div className="pageContainer">
+                            <div className="pageImgDiv">
+                                <img className="pagePic" src={`http://localhost:9998/${stuff.path}`} alt="bigstuff"></img>
+                            </div>
+                            <div className="pageText">
+                                <h2 className="pageH">{stuff.title}</h2>
+                                <p className="pageP">{stuff.room}</p>
+                                <h4>Beschreibung: </h4>
+                                <p className="pageP">{stuff.text}</p>
+                            </div>
+                        </div>)}
+                </div>
+                <div className="formular">
+                    <AddStuff />
+                </div>
+            </div>
         </div>
     )
 }

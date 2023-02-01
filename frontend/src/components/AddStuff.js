@@ -40,10 +40,10 @@ export const AddStuff = () => {
         <div className="formDiv">
             <form onSubmit={handleSubmit}>
                 <div className="inputDiv"><label>Title</label>
-                    <input type="text" name="title" />
+                    <input type="text" name="title" placeholder="Title" />
                 </div>
                 <div className="inputDiv"><label>Room</label>
-                    <input type="text" name="room" />
+                    <input type="text" name="room" placeholder="Room" />
                 </div>
                 <div className="inputDiv"><label>Stuff Size:</label>
                     <div id="checkboxStuff">
@@ -58,7 +58,7 @@ export const AddStuff = () => {
                         </div>
                     </div>
                 </div>
-                <div className="inputDiv"><input className="textInput" name="text" type={"text"} placeholder="Add Text"></input></div>
+                <div className="inputDiv"><textarea className="textInput" rows="5" columns="10" maxLength="150" name="text" placeholder="Add Text"></textarea></div>
                 <button type="submit">Add Furniture</button>
             </form>
             <div className="uploadDiv">
