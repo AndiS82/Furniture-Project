@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 
 export function ItemList() {
     const [inventar, setInventar] = useState([])
-    //console.log("inventar console log: ", inventar)
     useEffect(() => {
         fetch("http://localhost:9998/api/bigstuff")
             .then((response) => response.json())
