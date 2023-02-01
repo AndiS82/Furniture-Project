@@ -27,3 +27,9 @@ form {
     display: flex;
     justify-content: center;
 }
+
+/* ALLSTUFF */
+#fetch {
+    display: flex;
+    justify-content: center;
+}
