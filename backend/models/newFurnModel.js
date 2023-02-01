@@ -1,3 +1,4 @@
+import mongodb from "mongodb";
 import { getDb } from "../utils/dbFurniture.js"
 
 

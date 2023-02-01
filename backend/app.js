@@ -4,13 +4,14 @@ import multer from "multer";
 import morgan from "morgan";
 import './config/config.js'
 import { furnitureCreate } from "./controller/newFurniture.js";
+import { getFurniture } from "./controller/allFurniture.js"
 
 const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.json());
 //app.use(multer());
-//an Tad 74 hatten wir Multer benutzt. Der Import war wie hier aber wir hatten das anders verwendet:
+//an Tag 74 hatten wir Multer benutzt. Der Import war wie hier aber wir hatten das anders verwendet:
 //const upload = multer({ dest: './public' })
 //und dann im Post request so: app.post('/natur', upload.single('wallpaper'), (req, res) => {
 //     console.log('Der Body:', req.file);
@@ -26,7 +27,7 @@ app.use(morgan("dev"));
 app.use(cors())
 
 app.post("/api/bigstuff", furnitureCreate)
-// app.
+app.get("/api/bigstuff", getFurniture)
 
 app.listen(PORT, () => {
     console.log("Server is running on port " + PORT);
