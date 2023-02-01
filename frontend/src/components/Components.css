@@ -18,9 +18,28 @@
 }
 
 /* ADDSTUFF */
+
+.formDiv {
+    width: 30%;
+    padding: 1.5%;
+    border: 2px solid #111;
+}
+
 form {
     display: flex;
     flex-direction: column;
+}
+
+label {
+    padding: 1%;
+}
+
+.inputDiv {
+    padding: 1%;
+}
+
+.uploadDiv {
+    padding: 1%;
 }
 
 #checkboxStuff {
@@ -28,8 +47,34 @@ form {
     justify-content: center;
 }
 
+.textInput {
+    width: 90%;
+    height: 10vh;
+}
+
 /* ALLSTUFF */
 #fetch {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+}
+
+.picContainer {
+    box-shadow: 0 3px 25px #111;
+}
+
+.previewPic {
+    height: 30vh;
+    width: 30vw;
+    object-fit: cover;
+}
+
+.previewP {
+    font-size: 3rem;
 }

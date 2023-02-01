@@ -11,7 +11,6 @@ const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.json());
-//an Tag 74 hatten wir Multer benutzt. Der Import war wie hier aber wir hatten das anders verwendet:
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, "./public")

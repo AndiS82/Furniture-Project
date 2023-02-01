@@ -15,13 +15,14 @@ header::before {
     bottom: 50%;
     left: 0px;
     content: "";
-    background-image: url("../img/wohnzimmer.jpg");
+    background-image: url("../img/zimmer.jpg");
     background-size: cover;
     opacity: 50%;
     background-repeat: no-repeat;
 }
 
 h1 {
+    font-size: 4rem;
     margin-top: 25vh;
     position: relative;
 }

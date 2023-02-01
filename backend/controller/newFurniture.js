@@ -4,12 +4,14 @@ export const furnitureCreate = (req, res) => {
     const {
         title,
         room,
-        stuff
+        stuff,
+        text
     } = req.body;
     insertFurniture({
         title,
         room,
-        stuff
+        stuff,
+        text
     })
         .then((id) => {
             res.json({ id })

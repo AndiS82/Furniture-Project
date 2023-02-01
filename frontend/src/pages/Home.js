@@ -10,7 +10,7 @@ export const Home = () => {
                 <Navbar />
             </>
             <header>
-                <h1>My Furniture</h1>
+                <h1>MY FURNITURE</h1>
             </header>
             <>
                 <ItemList />

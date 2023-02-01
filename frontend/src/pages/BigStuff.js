@@ -10,7 +10,8 @@ export const BigStuff = () => {
         fetch("http://localhost:9998/api/bigstuff")
             .then((res) => res.json())
             .then((data) => {
-                setBigstuff(data.furn.filter(single => single.stuff === "bigstuff"))
+                setBigstuff(data.furn.filter(single => single.stuff === "Big Stuff"))
+                console.log(data)
             })
         console.log(bigstuff)
     }, [])
@@ -21,8 +22,12 @@ export const BigStuff = () => {
             {console.log(bigstuff)}
             {bigstuff?.map((stuff) =>
                 <div>
-                    <div>{stuff.title}</div>
-                    <div>{stuff.room}</div>
+                    <div>
+                        <img src={`http://localhost:9998/${stuff.path}`} alt="bigstuff"></img>
+                    </div>
+                    <p>{stuff.title}</p>
+                    <p>{stuff.room}</p>
+                    <p>{stuff.text}</p>
                 </div>)}
             <AddStuff />
         </div>
