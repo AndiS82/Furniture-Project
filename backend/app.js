@@ -6,7 +6,6 @@ import './config/config.js'
 import { furnitureCreate } from "./controller/newFurniture.js";
 
 
-
 const PORT = process.env.PORT
 const app = express();
 
