@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 //app.use(multer());
-//an Tad 74 hatten wir Multer benutzt. Der Import war wie hier aber wir hatten das anders verwendet:
+//an Tag 74 hatten wir Multer benutzt. Der Import war wie hier aber wir hatten das anders verwendet:
 //const upload = multer({ dest: './public' })
 //und dann im Post request so: app.post('/natur', upload.single('wallpaper'), (req, res) => {
 //     console.log('Der Body:', req.file);
