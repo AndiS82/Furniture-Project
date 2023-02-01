@@ -31,4 +31,5 @@ form {
 /* ALLSTUFF */
 #fetch {
     display: flex;
+    justify-content: center;
 }

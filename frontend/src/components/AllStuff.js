@@ -12,7 +12,7 @@ export function ItemList() {
     console.log(inventar)
     return (
         <div>
-            {(inventar.furn).map((inventar) =>
+            {inventar?.furn?.map((inventar) =>
                 <div id="fetch">
                     <div >
                         <p>Name: {inventar.title}</p>
