@@ -30,7 +30,7 @@ export const NotSoBigStuff = () => {
                             </div>
                             <div className="pageText">
                                 <h2 className="pageH">{stuff.title}</h2>
-                                <p className="pageP">{stuff.room}</p>
+                                <p className="pageP">Location: {stuff.room}</p>
                                 <h4>Beschreibung: </h4>
                                 <p className="pageP">{stuff.text}</p>
                             </div>
