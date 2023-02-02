@@ -73,7 +73,6 @@ export const AddStuff = () => {
                     <button type="submit">Add Picture</button>
                 </form>
             </div>
-
         </div>
     </>)
 }

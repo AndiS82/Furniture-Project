@@ -12,9 +12,9 @@ function App() {
       <Router>
         <Routes>
           <Route path={"/"} element={<Home />} />
-          <Route path={"/bigstuff"} element={<BigStuff />} />
-          <Route path={"/notsobigstuff"} element={<NotSoBigStuff />} />
-          <Route path={"/smallstuff"} element={<SmallStuff />} />
+          <Route path={"/Big Stuff"} element={<BigStuff />} />
+          <Route path={"/Not So Big Stuff"} element={<NotSoBigStuff />} />
+          <Route path={"/Small Stuff"} element={<SmallStuff />} />
           <Route path={"/details"} element={<Details />} />
         </Routes>
       </Router>
