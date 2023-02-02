@@ -14,7 +14,7 @@ export function ItemList() {
     console.log(inventar)
     return (
         <div className="container">
-            {inventar?.furn?.map((inventar) =>
+            {inventar?.furn?.slice(0, 3).map((inventar) =>
                 <div>
                     <div id="fetch">
                         <div className="picContainer">

@@ -4,6 +4,7 @@ import "./Components.css"
 export const AddStuff = () => {
     const [furniture, setFurniture] = useState([])
     const [picId, setPicId] = useState()
+    const [btnState, setBtnState] = useState(false);
 
     useEffect(() => {
         fetch("http://localhost:9998/api/bigstuff")
@@ -35,9 +36,14 @@ export const AddStuff = () => {
                 setPicId(data.id)
             })
     }
+    function handleClick() {
+        setBtnState(btnState => !btnState);
+    }
+    console.log(btnState)
 
-    return (
-        <div className="formDiv">
+    return (<>
+        <button onClick={handleClick} className="toggleButton">Add something</button>
+        <div className={btnState.toString()}>
             <form onSubmit={handleSubmit}>
                 <div className="inputDiv"><label>Title</label>
                     <input type="text" name="title" placeholder="Title" />
@@ -69,5 +75,5 @@ export const AddStuff = () => {
             </div>
 
         </div>
-    )
+    </>)
 }

@@ -39,7 +39,7 @@ h1 {
     height: 40vh;
     width: 75vw;
     display: flex;
-    border: 2px solid #111;
+    border: 2px solid gainsboro;
 }
 
 .pagePic {
